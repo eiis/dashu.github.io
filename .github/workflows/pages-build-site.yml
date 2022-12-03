@@ -39,14 +39,8 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Build ranuts
-        run: pnpm -F ranuts build
-
-      - name: Build ranui
-        run: pnpm -F ranui build
-
       - name: Build docs
-        run: pnpm -F docs build
+        run: pnpm build
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
