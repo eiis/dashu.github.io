@@ -1,1 +1,0 @@
-pnpm -F ranuts test

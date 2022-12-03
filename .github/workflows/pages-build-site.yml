@@ -1,56 +1,44 @@
-name: pages-build-site
-on: 
-  push: 
-    branches:
-      - main
+name: pushDocs
+
+on:
+  // 配置当push进入什么分支的时候执行
+  push:
+    branches: 
+     - main
+
+
 jobs:
-  deploy:
-    runs-on: ubuntu-latest 
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+     // 具体的执行步骤
     steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@main
 
-      - name: Install Node.js
-        uses: actions/setup-node@v3
+     // 使用的node版本   
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@main
         with:
-          node-version: 16
-
-      - uses: pnpm/action-setup@v2
-        name: Install pnpm
-        id: pnpm-install
-        with:
-          version: 7
-          run_install: false
+          node-version:  ${{ matrix.node }}
       
-      - name: Get pnpm store directory
-        id: pnpm-cache
-        shell: bash
-        run: |
-          echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
-
-      - uses: actions/cache@v3
-        name: Setup pnpm cache
-        with:
-          path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
-          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-pnpm-store-
-
+		// 执行安装
       - name: Install dependencies
         run: pnpm install
-
-      - name: Build ranuts
-        run: pnpm -F ranuts build
-
-      - name: Build ranui
-        run: pnpm -F ranui build
-
-      - name: Build docs
-        run: pnpm -F docs build
-
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.MYBLOG }}
-          exclude_assets: ''
-          publish_dir: packages/docs/.vitepress/dist
+    
+    // 执行打包
+      - name: Build VuePress
+        run: pnpm run build
+      
+    // 执行部署
+      - name: Deploy to Pages
+        run: |
+          cd .vitepress/dist 
+          git init
+          git add -A
+          git commit -m 'deploy'
+          git push -f https://Z125895699:${{ secrets.MYBLOG }}@github.com/Z125895699/MyBlog.git main:gh-pages
+          cd -
