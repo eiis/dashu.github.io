@@ -1,14 +1,14 @@
 ---
 layout: home
 
-title: Home
+title: dashu
 
 hero:
   name: coderdashu
   text: 一名大叔而已
   tagline:
   image:
-    src: home.jpg
+    src: ./home.jpg
     alt: logo
   actions:
     - theme: brand
