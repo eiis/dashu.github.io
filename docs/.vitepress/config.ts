@@ -2,7 +2,7 @@
  * @Author: zhangdi 1258956799@qq.com
  * @Date: 2022-12-03 22:23:50
  * @LastEditors: zhangdi 1258956799@qq.com
- * @LastEditTime: 2022-12-05 21:46:10
+ * @LastEditTime: 2022-12-11 00:11:05
  * @FilePath: /MyBlog/docs/.vitepress/config.ts
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -23,20 +23,21 @@ export default defineConfig({
   },
   themeConfig: {
     //左上角的文字和图标
-    logo: './home.jpg',
+    logo: './home.png',
     siteTitle: 'coderdashu',
     //右上角的社交链接
     socialLinks: [
       { icon: 'github', link: 'https://github.com/Z125895699' },
-      // {icon:'twitter',link:'https://github.com/Z125895699'}
     ],
     nav: [
-      { text: 'JavaScript', link: '/guide' },
+      { text: "首页", link: "/" },
+      {text: "笔记", link: "/src/notes/"},
       { text: 'Vue',
-      items: [
-        { text: 'Vue2', link: '/Vue2' },
-        { text: 'Vue3', link: '/Vue3' },
-      ] },
+        items: [
+          { text: 'Vue2', link: '/src/vue2/' },
+          { text: 'Vue3', link: '/Vue3' },
+        ] 
+      },
       { text: 'React', link: 'https://github.com/...' }
     ],
     sidebar: [
