@@ -2,7 +2,7 @@
  * @Author: zhangdi 1258956799@qq.com
  * @Date: 2022-12-03 22:23:50
  * @LastEditors: zhangdi 1258956799@qq.com
- * @LastEditTime: 2022-12-11 00:11:05
+ * @LastEditTime: 2022-12-15 19:44:49
  * @FilePath: /MyBlog/docs/.vitepress/config.ts
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -32,6 +32,7 @@ export default defineConfig({
     nav: [
       { text: "首页", link: "/" },
       {text: "笔记", link: "/src/notes/"},
+      {text: "uniapp", link: "/src/uniapp/"},
       { text: 'Vue',
         items: [
           { text: 'Vue2', link: '/src/vue2/' },
@@ -40,11 +41,15 @@ export default defineConfig({
       },
       { text: 'React', link: 'https://github.com/...' }
     ],
+    // footer: {
+    //   message: "Released under the MIT License.",
+    //   copyright: "Copyright © 2022-12-11",
+    // },
     sidebar: [
       {
-        text: 'Guide',
+        text: '笔记',
         items: [
-          { text: 'Introduction', link: '/introduction' },
+          { text: 'note1', link: '/src/vue2/' },
           { text: 'Getting Started', link: '/getting-started' },
         ]
       }
