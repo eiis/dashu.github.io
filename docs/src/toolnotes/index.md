@@ -2,7 +2,7 @@
  * @Author: zhangdi 1258956799@qq.com
  * @Date: 2022-12-22 21:11:46
  * @LastEditors: zhangdi 1258956799@qq.com
- * @LastEditTime: 2022-12-27 21:54:01
+ * @LastEditTime: 2022-12-27 21:59:16
  * @FilePath: /MyBlog/docs/src/toolnotes/index.md
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -50,6 +50,8 @@ source ~/.bash_profile
  ```
 
 2. 按x可以查看菜单  同时支持1234切换状态区
+
+3. 按c可以commit p拉取远程代码 P推送远程
 
 
 
