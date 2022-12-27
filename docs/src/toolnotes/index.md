@@ -2,7 +2,7 @@
  * @Author: zhangdi 1258956799@qq.com
  * @Date: 2022-12-22 21:11:46
  * @LastEditors: zhangdi 1258956799@qq.com
- * @LastEditTime: 2022-12-27 21:27:15
+ * @LastEditTime: 2022-12-27 21:54:01
  * @FilePath: /MyBlog/docs/src/toolnotes/index.md
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -26,7 +26,7 @@ nvm --version
 ```javascript
 nvm install stable
  ```
- 2. 安装指定版本，可模糊安装，如：安装 v17.4.0，既可 $ nvm install v17.4.0，又可 $ nvm install 17.4
+2. 安装指定版本，可模糊安装，如：安装 v17.4.0，既可 $ nvm install v17.4.0，又可 $ nvm install 17.4
 ```javascript
  nvm install <version>
  ```
@@ -40,6 +40,17 @@ nvm use <version>
 ```javascript
  brew install jesseduffield/lazygit/lazygit
  ```
+* 使用
+1. 直接在需要使用的仓库中输入lazygit 如果觉得命令很麻烦可以配置别名lg,如下 然后可以直接输入lg就能打开lazygit页面
+
+```javascript
+open ~/.bash_profile
+alias lg='lazygit'
+source ~/.bash_profile
+ ```
+
+2. 按x可以查看菜单  同时支持1234切换状态区
+
 
 
  
