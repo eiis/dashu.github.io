@@ -2,11 +2,11 @@
  * @Author: zhangdi 1258956799@qq.com
  * @Date: 2022-12-22 21:11:46
  * @LastEditors: zhangdi 1258956799@qq.com
- * @LastEditTime: 2022-12-22 21:20:22
+ * @LastEditTime: 2022-12-27 21:27:15
  * @FilePath: /MyBlog/docs/src/toolnotes/index.md
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
-# mac使用nvm管理node版本
+## mac使用nvm管理node版本
 *安装
 ```javascript
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
@@ -21,10 +21,6 @@ wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
 ```javascript
 nvm --version
  ```
-
-
-
-
 * nvm常用的命令
 1. 安装最新稳定版 node
 ```javascript
@@ -37,6 +33,12 @@ nvm install stable
 3. 切换使用指定的版本 node
 ```javascript
 nvm use <version>
+ ```
+
+ ## 使用lazygit
+ * 安装
+```javascript
+ brew install jesseduffield/lazygit/lazygit
  ```
 
 
