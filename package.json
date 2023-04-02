@@ -6,12 +6,17 @@
   "scripts": {
     "dev": "vitepress dev docs --open",
     "build": "vitepress build docs",
-    "serve": "vitepress serve docs"
+    "serve": "vitepress serve docs",
+    "commit": "git-cz"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "vitepress": "1.0.0-alpha.29"
+  },
+  "devDependencies": {
+    "commitizen": "^4.3.0",
+    "cz-emoji": "1.3.2-canary.2"
   }
 }
