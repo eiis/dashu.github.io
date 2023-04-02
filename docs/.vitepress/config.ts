@@ -2,7 +2,7 @@
  * @Author: zhangdi 1258956799@qq.com
  * @Date: 2022-12-03 22:23:50
  * @LastEditors: zhangdi 1258956799@qq.com
- * @LastEditTime: 2023-04-02 14:59:24
+ * @LastEditTime: 2023-04-02 15:17:38
  * @FilePath: /MyBlog/docs/.vitepress/config.ts
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -16,7 +16,7 @@ export default defineConfig({
   // base: "/dashu.github.io/",
   lastUpdated: true, // 页面上展示最后更新的时间
   head:[
-    ['link', { rel: 'icon', href: './favicon.ico' }]
+    ['link', { rel: 'icon', href: '/favicon.ico' }]
   ],
   markdown: {
     theme: 'material-palenight',
@@ -24,7 +24,7 @@ export default defineConfig({
   },
   themeConfig: {
     //左上角的文字和图标
-    logo: './home.png',
+    logo: '/home.png',
     siteTitle: 'coderdashu',
     //右上角的社交链接
     socialLinks: [
