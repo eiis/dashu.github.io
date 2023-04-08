@@ -2,7 +2,7 @@
  * @Author: zhangdi 1258956799@qq.com
  * @Date: 2022-12-03 22:23:50
  * @LastEditors: zhangdi 1258956799@qq.com
- * @LastEditTime: 2023-04-02 18:54:22
+ * @LastEditTime: 2023-04-08 19:34:36
  * @FilePath: /MyBlog/docs/.vitepress/config.ts
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -36,10 +36,11 @@ export default defineConfig({
       {text: "笔记", link: "/src/notes/"},
       {text: "uniapp", link: "/src/uniapp/"},
       {text: "git工具", link: "/src/git/"},
+      {text: "typescript", link: "/src/typescript/"},
       { text: 'Vue',
         items: [
           { text: 'Vue2', link: '/src/vue2/' },
-          { text: 'Vue3', link: '/src/vue2/' },
+          { text: 'Vue3', link: '/src/vue3/' },
         ] 
       },
       { text: 'React', link: '/src/react/' }
